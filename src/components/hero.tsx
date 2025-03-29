@@ -1,4 +1,4 @@
-
+import energy from "../assets/energy.png"
 
 export default function Hero() {
     return (
@@ -6,12 +6,8 @@ export default function Hero() {
             {/* Background Image */}
             <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-                style={{
-                    backgroundImage:
-                        'url("https://s3-alpha-sig.figma.com/img/fb4d/b41e/5381701e71eb249db9793b785d8f383f?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VF~lS9J4yrystuESjbETC7-LvopIfsElccQn6i0Y9E2gD36JX~4J0HtoYpZIvLWlWrw32nLAlYSTfs9Fq751hgaWTQVBumNKFH4FYwjscbv8tGe~mOpHCYAbDABhDhGJucsU3Hd6yG-SYspZo99qpEpUMoIbNv8L3rfubUk2Q4M9nPZZzS8Z-FUmtxZIoquaxKmRR8jLdS3JrjqqYFOkr7HFx73LRdXAbqE7vJibBY3OwggWjakXN4VP68wfK1~GWa5G0zZ3Mcig6NDGZbaZ0ceCUDptQ9t4AvNq6WYzXAE-IA6yg3YK0gW-mgOcZvQ1X7xJw2sYnzGH0AP2vMniSQ__")',
-                    pointerEvents: 'none',
-                }}
             >
+                <img src={energy} alt="Energy" className="w-full h-full object-cover object-center" />
                 {/* Dark overlay for better text readability */}
                 {/* <div className="absolute inset-0 bg-black/20"></div> */}
             </div>
