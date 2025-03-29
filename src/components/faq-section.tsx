@@ -55,6 +55,7 @@ export default function FAQSection() {
                                 alt="Blue light bulb illustration"
                                 className="w-full h-full object-cover object-center"
                             />
+
                         </div>
                     </div>
                 </div>
