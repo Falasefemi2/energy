@@ -31,31 +31,34 @@ export default function FAQSection() {
     ]
 
     return (
-        <div className="w-full bg-[#F7F7F7] px-4 py-12">
+        <div className="w-full bg-[#F7F7F7] dark:bg-gray-950 px-4 py-12">
             <div className="max-w-7xl mx-auto">
-                <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm dark:shadow-gray-800/50 overflow-hidden">
                     <div className="grid lg:grid-cols-2 items-start">
                         {/* FAQ Section */}
                         <div className="p-8 space-y-6">
-                            <h2 className="text-primary text-sm font-medium">• Frequently asked questions</h2>
+                            <h2 className="text-primary dark:text-blue-400 text-sm font-medium">• Frequently asked questions</h2>
                             <Accordion type="single" collapsible className="w-full">
                                 {faqs.map((faq, index) => (
                                     <AccordionItem key={index} value={`item-${index}`}>
-                                        <AccordionTrigger className="text-left text-[#000000] font-medium">{faq.question}</AccordionTrigger>
-                                        <AccordionContent className="text-[#767676] font-light">{faq.answer}</AccordionContent>
+                                        <AccordionTrigger className="text-left text-[#000000] dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400">
+                                            {faq.question}
+                                        </AccordionTrigger>
+                                        <AccordionContent className="text-[#767676] dark:text-gray-300 font-light">
+                                            {faq.answer}
+                                        </AccordionContent>
                                     </AccordionItem>
                                 ))}
                             </Accordion>
                         </div>
 
                         {/* Image Section */}
-                        <div className="relative aspect-square lg:aspect-auto lg:h-full order-first lg:order-last bg-[#000000] overflow-hidden">
+                        <div className="relative aspect-square lg:aspect-auto lg:h-full order-first lg:order-last bg-[#000000] dark:bg-gray-800 overflow-hidden">
                             <img
                                 src={bulb || "/placeholder.svg"}
                                 alt="Blue light bulb illustration"
                                 className="w-full h-full object-cover object-center"
                             />
-
                         </div>
                     </div>
                 </div>
